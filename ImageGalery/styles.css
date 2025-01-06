@@ -1,7 +1,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    transition: background-color 0.5s;
+    background-color: #c9c0c0;
     display: flex;
     justify-content: center;
     align-items: center;

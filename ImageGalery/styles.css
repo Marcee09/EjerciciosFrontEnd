@@ -21,10 +21,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
+  .container-buttons{
+    display: flex;
+    flex-direction: column;
+  }
+
   .buttons {
     margin-top: 20px;
     text-align: center;
     padding-left: 50px;
+
   }
   
   button {
@@ -36,6 +42,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    flex-direction: column;
   }
   
   button:hover {

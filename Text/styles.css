@@ -1,0 +1,141 @@
+/* Estilos base */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Efecto máquina de escribir */
+.holamundo {
+    font-size: 2.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    width: 0;
+    animation: typing 2s steps(20) forwards,
+               blink 0.5s step-end infinite alternate;
+}
+
+/* Letras apareciendo una por una */
+.letter-reveal {
+    font-size: 2rem;
+    visibility: hidden;
+    animation: showUp 0.5s forwards;
+    animation-delay: 2.5s; /* Comienza después de holamundo */
+}
+
+.letter-reveal span {
+    display: inline-block;
+    opacity: 0;
+    animation: letterFade 0.2s forwards;
+}
+
+.letter-reveal span:nth-child(1) { animation-delay: 2.5s; }
+.letter-reveal span:nth-child(2) { animation-delay: 2.7s; }
+.letter-reveal span:nth-child(3) { animation-delay: 2.9s; }
+.letter-reveal span:nth-child(4) { animation-delay: 3.1s; }
+.letter-reveal span:nth-child(5) { animation-delay: 3.3s; }
+.letter-reveal span:nth-child(6) { animation-delay: 3.5s; }
+.letter-reveal span:nth-child(7) { animation-delay: 3.7s; }
+.letter-reveal span:nth-child(8) { animation-delay: 3.9s; }
+.letter-reveal span:nth-child(9) { animation-delay: 4.1s; }
+.letter-reveal span:nth-child(10) { animation-delay: 4.3s; }
+
+/* Fade in suave */
+.smooth-fade {
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: smoothFade 2s forwards;
+    animation-delay: 4.5s; /* Comienza después de letter-reveal */
+}
+
+/* Revelación con blur */
+.blur-reveal {
+    font-size: 1.8rem;
+    opacity: 0;
+    filter: blur(10px);
+    animation: blurIn 2s forwards;
+    animation-delay: 6.5s; /* Comienza después de smooth-fade */
+}
+
+/* Deslizamiento con brillo */
+.glow-slide {
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: glowSlideIn 2s forwards;
+    animation-delay: 8.5s; /* Comienza después de blur-reveal */
+}
+
+/* Animaciones */
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes showUp {
+    to { visibility: visible; }
+}
+
+@keyframes letterFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes smoothFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blurIn {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes glowSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(234, 238, 18, 0.918);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        text-shadow: 0 0 10px rgb(255, 238, 7);
+    }
+}
+  

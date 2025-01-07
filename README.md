@@ -27,3 +27,16 @@ Este ejercicio consiste en una galería interactiva que permite al usuario cambi
 <img src="./galeriaImagenes.png" alt="Galería de Imágenes" width="300">
 
 ---
+
+### 2. Efectos de textos
+
+**Descripción**:  
+Este ejercicio aplica efectos con css en textos. Cada linea tiene un efecto diferente.
+
+**Vista del Ejercicio**: 
+
+<img src="./texto.png" alt="Galería de Imágenes" width="300">
+
+
+
+
